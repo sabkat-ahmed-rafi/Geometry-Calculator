@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="forest">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Geometry Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="m-8">
+    <header>
+         <h1 class="text-4xl mb-20 flex justify-center font-bold">Geometry Calculator</h1>
+    </header>
+    <main>
+        <section class="flex flex-wrap justify-evenly gap-9">
+           <!-- Triangle section  -->
+           <div class="card w-96 bg-base-200 shadow-xl pt-4">
+            <figure><img src="images/triangle.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Triangle</h2>
+              <p class="text-xl">Area (A) = 0.5 × b × h</p>
+              <div>
+                <input id="triangle-base" class="w-32 h-9 rounded p-3" type="text" placeholder="b"> <span>cm</span>
+                <input id="triangle-height" class="w-32 h-9 rounded p-3" type="text" placeholder="h"> <span>cm</span>
+              </div>
+              <p class="font-bold">Area: <span id="triangle-result"> 0</span>  cm<sup>2</sup></p>
+              <div class="card-actions justify-end">
+                <button id="triangle-button" class="btn btn-primary w-full font-bold">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <!-- Rectangle section  -->
+          <div class="card w-96 bg-base-200 shadow-xl pt-4">
+            <figure><img src="images/rectangle.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Rectangle</h2>
+              <p class="text-xl">Area (A) = w × I</p>
+              <div>
+                <input id="rectangle-base" class="w-32 h-9 rounded p-3" type="text" placeholder="w"> <span>cm</span>
+                <input id="rectangle-height" class="w-32 h-9 rounded p-3" type="text" placeholder="i"> <span>cm</span>
+              </div>
+              <p class="font-bold">Area: <span id="rectangle-result"> 0</span>  cm<sup>2</sup></p>
+              <div class="card-actions justify-end">
+                <button id="rectangle-button" class="btn btn-primary w-full font-bold">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <!-- Parallelogram section  -->
+          <div class="card w-96 bg-base-200 shadow-xl pt-4">
+            <figure><img src="images/parallelogram.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Parallelogram</h2>
+              <p class="text-xl">Area (A) = b × h</p>
+              <div>
+                <input id="parallelogram-base" class="w-32 h-9 rounded p-3" type="text" placeholder="b"> <span>cm</span>
+                <input id="parallelogram-height" class="w-32 h-9 rounded p-3" type="text" placeholder="h"> <span>cm</span>
+              </div>
+              <p class="font-bold">Area: <span id="parallelogram-result"> 0</span>  cm<sup>2</sup></p>
+              <div class="card-actions justify-end">
+                <button id="parallelogram-button" class="btn btn-primary w-full font-bold">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <!-- Rhombus section  -->
+          <div class="card w-96 bg-base-200 shadow-xl pt-4">
+            <figure><img src="images/rhombus.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Rhombus</h2>
+              <p class="text-xl">Area (A) = 0.5 × d<sub>2</sub> × d<sub>2</sub></p>
+              <div>
+                <input id="rhombus-base" class="w-32 h-9 rounded p-3" type="text" placeholder="d"> <span>cm</span>
+                <input id="rhombus-height" class="w-32 h-9 rounded p-3" type="text" placeholder="d"> <span>cm</span>
+              </div>
+              <p class="font-bold">Area: <span id="rhombus-result"> 0</span>  cm<sup>2</sup></p>
+              <div class="card-actions justify-end">
+                <button id="rhombus-button" class="btn btn-primary w-full font-bold">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <!-- Pentagon section  -->
+          <div class="card w-96 bg-base-200 shadow-xl pt-4">
+            <figure><img src="images/pentagon.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Pentagon</h2>
+              <p class="text-xl">Area (A) = 0.5 × p × b</p>
+              <div>
+                <input id="pentagon-base" class="w-32 h-9 rounded p-3" type="text" placeholder="b"> <span>cm</span>
+                <input id="pentagon-height" class="w-32 h-9 rounded p-3" type="text" placeholder="h"> <span>cm</span>
+              </div>
+              <p class="font-bold">Area: <span id="pentagon-result"> 0</span>  cm<sup>2</sup></p>
+              <div class="card-actions justify-end">
+                <button id="pentagon-button" class="btn btn-primary w-full font-bold">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <!-- Ellipse section --> 
+          <div class="card w-96 bg-base-200 shadow-xl pt-4">
+            <figure><img src="images/ellipse.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Ellipse</h2>
+              <p class="text-xl">Area (A) = π × a × b</p>
+              <div>
+                <input id="ellipse-base" class="w-32 h-9 rounded p-3" type="text" placeholder="a"> <span>cm</span>
+                <input id="ellipse-height" class="w-32 h-9 rounded p-3" type="text" placeholder="b"> <span>cm</span>
+              </div>
+              <p class="font-bold">Area: <span id="ellipse-result"> 0</span>  cm<sup>2</sup></p>
+              <div class="card-actions justify-end">
+                <button id="ellipse-button" class="btn btn-primary w-full font-bold">Calculate</button>
+              </div>
+            </div>
+          </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
